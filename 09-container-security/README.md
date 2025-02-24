@@ -23,11 +23,3 @@ There are two main considerations when it comes to container security (1) the co
 
 ### Docker daemon (dockerd)
   - Start with --userns-remap option(https://docs.docker.com/engine/security/userns-remap/)
-
-### Individual containers:
-- Use read only filesystem if writes are not needed
-- --cap-drop=all, then --cap-add anything you need
-- Limit cpu and memory --cpus=“0.5” --memory 1024m
-- Use --security-opt
-  - seccomp profiles (https://docs.docker.com/engine/security/seccomp/)
-  - apparmor profiles (https://docs.docker.com/engine/security/apparmor/)

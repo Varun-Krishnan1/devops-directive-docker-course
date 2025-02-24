@@ -43,5 +43,16 @@ ENV ENV_VAR=bar
 # Use the convention of your language/framework 
 WORKDIR path/to/the/working/directory
 
+# If building own application and always running with the same 
+# set of arguments -> use CMD 
+
+# If building utility where you can pass arguments to containre 
+# at runtime -> use entrypoint 
+# So used when you have executable in your directory for people 
+# to pass args too
+
+# I guess there's only one entrypoint per docker file -> dockerfile 
+# specifies the primary executable that will be run when a container 
+# is started from that image
 ENTRYPOINT [ "echo", "Hey Team 👋 (entrypoint)" ]
 CMD [ "+ (cmd)" ]
